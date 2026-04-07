@@ -22,12 +22,12 @@ jobs:
           distribution: 'temurin'
 
       - name: Make gradlew executable
-        run: chmod +x ./gradlew
+        run: chmod +x gradlew
 
       - name: Start SUT
         run: |
           java -jar ./artifacts/app-card-delivery.jar &
-          sleep 15
+      
 
       - name: Run tests
         run: ./gradlew test --info -Dselenide.headless=true
