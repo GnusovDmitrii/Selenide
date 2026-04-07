@@ -13,6 +13,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
+<<<<<<< HEAD
           distribution: 'adopt'
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
@@ -22,3 +23,17 @@ jobs:
       - name: Build with Gradle
 
         run: ./gradlew test --info -Dselenide.headless=true
+=======
+          distribution: 'temurin'
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Start SUT
+        run: |
+          java -jar ./artifacts/app-card-delivery.jar &
+          sleep 10
+
+      - name: Run tests
+        run: ./gradlew test --info -Dselenide.headless=true
+>>>>>>> 70af075450ff296f32caf57008edc8664cb051ef
