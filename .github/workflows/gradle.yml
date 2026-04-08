@@ -22,16 +22,10 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
-      - name: Check if JAR exists
-        run: |
-          ls -la ./artifacts/
-          file ./artifacts/app-card-delivery.jar
-
       - name: Start SUT
         run: |
           java -jar ./artifacts/app-card-delivery.jar &
           sleep 15
-          curl -I http://localhost:9999
 
       - name: Run tests
         run: ./gradlew test --info -Dselenide.headless=true
