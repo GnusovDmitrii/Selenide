@@ -27,19 +27,3 @@ out/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
-.vscode/
-
-### Package Files ###
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-### Exclusions ###
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**
-!**/src/test/**
