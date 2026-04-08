@@ -24,8 +24,10 @@ jobs:
 
       - name: Start SUT
         run: |
+          echo "Starting SUT..."
           java -jar ./artifacts/app-card-delivery.jar &
           sleep 10
+          echo "SUT started, checking..."
           curl -I http://localhost:9999 || echo "Failed to connect"
 
       - name: Run tests
