@@ -1,3 +1,5 @@
+[![Java CI with Gradle](https://github.com/GnusovDmitrii/Selenide/actions/workflows/gradle.yml/badge.svg)](https://github.com/GnusovDmitrii/Selenide/actions/workflows/gradle.yml)
+
 # Задача №1: заказ доставки карты
 
 Вам необходимо автоматизировать тестирование формы заказа доставки карты:
